@@ -6,7 +6,19 @@ public class Year {
     }
 
     public Boolean isLeapYear() {
-        return isDivisibleBy(4) && !(isDivisibleBy(100) && isNotDivisibleBy(400));
+        return isDivisibleByFour() && !(isDivisibleByOneHundred() && isNotDivisibleByFourHundred());
+    }
+
+    private boolean isNotDivisibleByFourHundred() {
+        return isNotDivisibleBy(400);
+    }
+
+    private boolean isDivisibleByOneHundred() {
+        return isDivisibleBy(100);
+    }
+
+    private boolean isDivisibleByFour() {
+        return isDivisibleBy(4);
     }
 
     private boolean isNotDivisibleBy(int number) {
