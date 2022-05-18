@@ -1,9 +1,6 @@
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LeapYearTest {
     /*
@@ -13,7 +10,6 @@ public class LeapYearTest {
     A year is a leap year if divisible by 400
     A year is not a leap year if divisible by 100 but not by 400
      */
-
     @Test
     void not_be_leap_year_if_not_divisible_by_4() {
         assertThat(leapYear(1997)).isFalse();
